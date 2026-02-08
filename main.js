@@ -43,3 +43,13 @@ function getRandomCountry() {
         random -= country.weight;
     }
 }
+
+// 제휴 문의 폼 토글 기능
+const toggleInquiryButton = document.getElementById('toggle-inquiry-form');
+const inquiryFormContent = document.getElementById('inquiry-form-content');
+
+if (toggleInquiryButton && inquiryFormContent) {
+    toggleInquiryButton.addEventListener('click', () => {
+        inquiryFormContent.classList.toggle('hidden');
+    });
+}

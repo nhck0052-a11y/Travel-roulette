@@ -13,19 +13,22 @@
         <button id="draw-button">지금 바로 확인!</button>
         <div id="result"></div>
 
-        <div class="form-container">
-            <h2>제휴 문의</h2>
-            <form action="https://formspree.io/f/xbdajoag" method="POST">
-                <label for="email">
-                    이메일:
-                    <input type="email" name="email" id="email" required>
-                </label>
-                <label for="message">
-                    메시지:
-                    <textarea name="message" id="message" required></textarea>
-                </label>
-                <button type="submit">보내기</button>
-            </form>
+        <div class="partnership-inquiry-widget">
+            <button id="toggle-inquiry-form" class="inquiry-button">제휴 문의</button>
+            <div id="inquiry-form-content" class="hidden">
+                <h2>제휴 문의</h2>
+                <form action="https://formspree.io/f/xbdajoag" method="POST">
+                    <label for="email">
+                        이메일:
+                        <input type="email" name="email" id="email" required>
+                    </label>
+                    <label for="message">
+                        메시지:
+                        <textarea name="message" id="message" required></textarea>
+                    </label>
+                    <button type="submit">보내기</button>
+                </form>
+            </div>
         </div>
     </div>
     <script src="main.js"></script>
