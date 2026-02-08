@@ -200,3 +200,83 @@ const countries = [
         }
     }
 ];
+
+const drawButton = document.getElementById('draw-button');
+const resultDiv = document.getElementById('result');
+
+drawButton.addEventListener('click', () => {
+    resultDiv.textContent = translations[currentLang].drawing_text; // MODIFIED LINE
+    // 이전에 생성된 폭죽 요소들을 제거
+    document.querySelectorAll('.firework').forEach(f => f.remove());
+
+    setTimeout(() => {
+        const selectedCountry = getRandomCountry();
+        resultDiv.innerHTML = `
+            <h2>${translations[currentLang].congratulations_prefix} <br>${translations[currentLang]['country_name_' + selectedCountry.key]} ${selectedCountry.flag}${translations[currentLang].congratulations_suffix}</h2>
+            <p class="country-description">${translations[currentLang].country_description_prefix} ${translations[currentLang]['country_description_' + selectedCountry.key]}</p>
+            <p class="season-info">${translations[currentLang].season_info_prefix} ${translations[currentLang]['country_season_' + selectedCountry.key]}</p>
+        `; // MODIFIED BLOCK
+        applyCountryStyles(selectedCountry.colorPalette); // Apply dynamic styles
+        createFireworks(); // 폭죽 효과 트리거
+    }, 2000);
+});
+
+function getRandomCountry() {
+    const totalWeight = countries.reduce((sum, country) => sum + country.weight, 0);
+    let random = Math.random() * totalWeight;
+
+    for (const country of countries) {
+        if (random < country.weight) {
+            return country;
+        }
+        random -= country.weight;
+    }
+}
+
+function applyCountryStyles(colorPalette) {
+    document.body.style.background = colorPalette.background;
+    document.documentElement.style.setProperty('--primary-color', colorPalette.primary);
+    document.documentElement.style.setProperty('--secondary-color', colorPalette.secondary);
+}
+
+// 폭죽 효과 생성 함수
+function createFireworks() {
+    const fireworkCount = 10; // 생성할 폭죽의 개수
+    for (let i = 0; i < fireworkCount; i++) {
+        const firework = document.createElement('div');
+        firework.classList.add('firework');
+        firework.style.left = `${Math.random() * 100}vw`; // 화면 전체에 랜덤 위치
+        firework.style.top = `${Math.random() * 80}vh`; // 화면 상단 80% 내에서 랜덤 위치
+        document.body.appendChild(firework);
+
+        // 애니메이션이 끝나면 요소 제거 (메모리 관리)
+        firework.addEventListener('animationend', () => {
+            firework.remove();
+        });
+    }
+}
+
+
+// 제휴 문의 폼 토글 기능
+const toggleInquiryButton = document.getElementById('toggle-inquiry-form');
+const inquiryFormContent = document.getElementById('inquiry-form-content');
+
+if (toggleInquiryButton && inquiryFormContent) {
+    toggleInquiryButton.addEventListener('click', () => {
+        inquiryFormContent.classList.toggle('hidden');
+    });
+}
+
+// Language switcher logic
+const languageSwitcher = document.getElementById('language-switcher');
+if (languageSwitcher) {
+    languageSwitcher.addEventListener('change', (event) => {
+        setLanguage(event.target.value);
+        localStorage.setItem('lang', event.target.value); // Save user preference
+    });
+
+    // Set initial language switcher value based on currentLang from translations.js
+    document.addEventListener('DOMContentLoaded', () => {
+        languageSwitcher.value = currentLang;
+    });
+}
