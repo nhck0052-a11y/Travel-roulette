@@ -1,0 +1,72 @@
+[debug] [2026-02-08T00:31:26.186Z] ----------------------------------------------------------------------
+[debug] [2026-02-08T00:31:26.192Z] Command:       /nix/store/qds3rzxwqrkvhzjxgcb95d2qx4sd9b1l-nodejs-20.11.1/bin/node /home/user/.npm/_npx/ba4f1959e38407b5/node_modules/.bin/firebase init
+[debug] [2026-02-08T00:31:26.193Z] CLI Version:   15.5.1
+[debug] [2026-02-08T00:31:26.193Z] Platform:      linux
+[debug] [2026-02-08T00:31:26.194Z] Node Version:  v20.11.1
+[debug] [2026-02-08T00:31:26.194Z] Time:          Sun Feb 08 2026 00:31:26 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-02-08T00:31:26.195Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-08T00:31:28.417Z] Checked if tokens are valid: true, expires at: 1770514145630
+[debug] [2026-02-08T00:31:28.418Z] Checked if tokens are valid: true, expires at: 1770514145630
+[debug] [2026-02-08T00:31:28.422Z] >>> [apiv2][query] GET https://monospace-pa.googleapis.com/v1/workspaces/travel-roulette-49074598 [none]
+[debug] [2026-02-08T00:31:29.692Z] <<< [apiv2][status] GET https://monospace-pa.googleapis.com/v1/workspaces/travel-roulette-49074598 200
+[debug] [2026-02-08T00:31:29.695Z] <<< [apiv2][body] GET https://monospace-pa.googleapis.com/v1/workspaces/travel-roulette-49074598 {"workspaceId":"travel-roulette-49074598","name":"Travel roulette","workspaceRedirectUrl":"firebase-travel-roulette-1770507257422.cluster-va5f6x3wzzh4stde63ddr3qgge.cloudworkstations.dev","status":"WORKSPACE_STATUS_RUNNING","lastAccessDatetime":"2026-02-08T00:09:59.504391Z","workspaceTemplate":"WORKSPACE_TEMPLATE_BLANK_WEB","owner":"SELF","serviceAccountEmail":"msp-8336952141038308714@monospace-1.iam.gserviceaccount.com","enableNix":true,"ownerEmail":"nhck0052@gmail.com","workspaceImageUrl":"https://www.gstatic.com/monospace/231115/logo_html.svg","templateArgs":"{\"__agentic_workspace\":true}","templateRepoUrl":"file:///usr/local/monospace/templates/public/blank-web","workstationAccessToken":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkLmdvb2dsZS5jb20vd29ya3N0YXRpb25zIiwiYXVkIjoiZmlyZWJhc2UtdHJhdmVsLXJvdWxldHRlLTE3NzA1MDcyNTc0MjIuY2x1c3Rlci12YTVmNngzd3p6aDRzdGRlNjNkZHIzcWdnZS5jbG91ZHdvcmtzdGF0aW9ucy5kZXYiLCJpYXQiOjE3NzA1MTA2ODksImV4cCI6MTc3MDU5NzA4OX0.kBXH5Q4tjjYHxTF7JWti4wSCOQ1w4iO9g9Gf1yVIU-ihHrzJCF9FNY8qRVl4jpdBjfUpmQDGMkX7c3E04fu5TDbNdqYuQvEozcDaxU7odo2YWAwdk75drimh3lkUrOZNaTjzQ_MKHkpV9OPzwW78ES396SJt7yZ2Ya_AMj5eqvVMGZAhO55iCkJX-w84T_sitKf5BhDWRbaq84CoI7v9oXh-OF1t8b2bycTJV3gw2wSMkZ1P7K_fUDwD0xDoLYvBXgrvobr0q-JuV4FMe1eGMPuBf33XGP1QV7YimCXnYvjvTKGmKgqZp53uNecW2vbCl0jwuN0fgONIXO880ehWDQ"}
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/user/travel-roulette
+
+[debug] [2026-02-08T00:36:42.630Z] ----------------------------------------------------------------------
+[debug] [2026-02-08T00:36:42.636Z] Command:       /nix/store/qds3rzxwqrkvhzjxgcb95d2qx4sd9b1l-nodejs-20.11.1/bin/node /home/user/.npm/_npx/ba4f1959e38407b5/node_modules/.bin/firebase init
+[debug] [2026-02-08T00:36:42.637Z] CLI Version:   15.5.1
+[debug] [2026-02-08T00:36:42.638Z] Platform:      linux
+[debug] [2026-02-08T00:36:42.638Z] Node Version:  v20.11.1
+[debug] [2026-02-08T00:36:42.638Z] Time:          Sun Feb 08 2026 00:36:42 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-02-08T00:36:42.638Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-08T00:36:44.371Z] Checked if tokens are valid: true, expires at: 1770514145630
+[debug] [2026-02-08T00:36:44.372Z] Checked if tokens are valid: true, expires at: 1770514145630
+[debug] [2026-02-08T00:36:44.377Z] >>> [apiv2][query] GET https://monospace-pa.googleapis.com/v1/workspaces/travel-roulette-49074598 [none]
+[debug] [2026-02-08T00:36:45.497Z] <<< [apiv2][status] GET https://monospace-pa.googleapis.com/v1/workspaces/travel-roulette-49074598 200
+[debug] [2026-02-08T00:36:45.497Z] <<< [apiv2][body] GET https://monospace-pa.googleapis.com/v1/workspaces/travel-roulette-49074598 {"workspaceId":"travel-roulette-49074598","name":"Travel roulette","workspaceRedirectUrl":"firebase-travel-roulette-1770507257422.cluster-va5f6x3wzzh4stde63ddr3qgge.cloudworkstations.dev","status":"WORKSPACE_STATUS_RUNNING","lastAccessDatetime":"2026-02-08T00:09:59.504391Z","workspaceTemplate":"WORKSPACE_TEMPLATE_BLANK_WEB","owner":"SELF","serviceAccountEmail":"msp-8336952141038308714@monospace-1.iam.gserviceaccount.com","enableNix":true,"ownerEmail":"nhck0052@gmail.com","workspaceImageUrl":"https://www.gstatic.com/monospace/231115/logo_html.svg","templateArgs":"{\"__agentic_workspace\":true}","templateRepoUrl":"file:///usr/local/monospace/templates/public/blank-web","workstationAccessToken":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkLmdvb2dsZS5jb20vd29ya3N0YXRpb25zIiwiYXVkIjoiZmlyZWJhc2UtdHJhdmVsLXJvdWxldHRlLTE3NzA1MDcyNTc0MjIuY2x1c3Rlci12YTVmNngzd3p6aDRzdGRlNjNkZHIzcWdnZS5jbG91ZHdvcmtzdGF0aW9ucy5kZXYiLCJpYXQiOjE3NzA1MTEwMDUsImV4cCI6MTc3MDU5NzQwNX0.fBLdsQq5eGAnhBmFaCzmPA4Rs0dMMnugdc3BYPDoP344nNTW53vjOQAimJ14nQKUwCQzRCmr2E1Y16m90PT5QtRfmBdYWpO5Autg2ejIeeAlfiXlx28JcfbLw9IwLMQDMBBwCeLLS2efmvwOGL3NRk2t8Bp09o285YRjpKy26ZrKDXQqHJSl5HMDfUisxCAK7K6-7Niff2B9NDVaon7Jk6HWJ9kOPEXVBQBjyz1Z46IAF1dQkb6riNNOJFHPkxF_ikDrHC7fC1jdCjAqVpZfVrnHbOSqueSe_p3Q95VNQVQcGzIxbFfqS5f_NTk6rQGTm61weyvXnLJ5J9spHfVoHQ"}
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/user/travel-roulette
+
+[debug] [2026-02-08T00:41:55.686Z] ----------------------------------------------------------------------
+[debug] [2026-02-08T00:41:55.691Z] Command:       /nix/store/qds3rzxwqrkvhzjxgcb95d2qx4sd9b1l-nodejs-20.11.1/bin/node /home/user/.npm/_npx/ba4f1959e38407b5/node_modules/.bin/firebase init
+[debug] [2026-02-08T00:41:55.692Z] CLI Version:   15.5.1
+[debug] [2026-02-08T00:41:55.692Z] Platform:      linux
+[debug] [2026-02-08T00:41:55.693Z] Node Version:  v20.11.1
+[debug] [2026-02-08T00:41:55.693Z] Time:          Sun Feb 08 2026 00:41:55 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-02-08T00:41:55.695Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-08T00:41:57.524Z] Checked if tokens are valid: true, expires at: 1770514145630
+[debug] [2026-02-08T00:41:57.525Z] Checked if tokens are valid: true, expires at: 1770514145630
+[debug] [2026-02-08T00:41:57.529Z] >>> [apiv2][query] GET https://monospace-pa.googleapis.com/v1/workspaces/travel-roulette-49074598 [none]
+[debug] [2026-02-08T00:41:58.416Z] <<< [apiv2][status] GET https://monospace-pa.googleapis.com/v1/workspaces/travel-roulette-49074598 200
+[debug] [2026-02-08T00:41:58.417Z] <<< [apiv2][body] GET https://monospace-pa.googleapis.com/v1/workspaces/travel-roulette-49074598 {"workspaceId":"travel-roulette-49074598","name":"Travel roulette","workspaceRedirectUrl":"firebase-travel-roulette-1770507257422.cluster-va5f6x3wzzh4stde63ddr3qgge.cloudworkstations.dev","status":"WORKSPACE_STATUS_RUNNING","lastAccessDatetime":"2026-02-08T00:09:59.504391Z","workspaceTemplate":"WORKSPACE_TEMPLATE_BLANK_WEB","owner":"SELF","serviceAccountEmail":"msp-8336952141038308714@monospace-1.iam.gserviceaccount.com","enableNix":true,"ownerEmail":"nhck0052@gmail.com","workspaceImageUrl":"https://www.gstatic.com/monospace/231115/logo_html.svg","templateArgs":"{\"__agentic_workspace\":true}","templateRepoUrl":"file:///usr/local/monospace/templates/public/blank-web","workstationAccessToken":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkLmdvb2dsZS5jb20vd29ya3N0YXRpb25zIiwiYXVkIjoiZmlyZWJhc2UtdHJhdmVsLXJvdWxldHRlLTE3NzA1MDcyNTc0MjIuY2x1c3Rlci12YTVmNngzd3p6aDRzdGRlNjNkZHIzcWdnZS5jbG91ZHdvcmtzdGF0aW9ucy5kZXYiLCJpYXQiOjE3NzA1MTEzMTgsImV4cCI6MTc3MDU5NzcxOH0.JoO7DsVaieWnMexsJwlNbQBuwDsu-dkp3FETjMgqWghH6YjnqlSdk9mJorThO3hRqlNuEJNQjG2idgijPTLkHh1aH8XEUr3J8V52huBAaxmCuupQCwZsQYpkXj5wSXj0CjTncz-q_2gv7ROihXaVKL9c61iNL4ALezOx8mLBcGwViUMWJBmHYPmK1ANenLMkR_hphora6jb9IWoIttwCzNzk7zSHHa-S2HOSZgd4T5aKswL-p_hTyXinnYcs5Lt1LZBedSivZdSBJqzXtv0RXrT839cFt0c7ccyhMQCZRd56sv_9EvBGy-FssxvMwyYy8ixRbygaC_AtcIziUY78bg"}
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/user/travel-roulette
+
