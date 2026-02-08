@@ -155,3 +155,39 @@ h1 {
     background-color: #218838;
     transform: translateY(-1px);
 }
+
+/* 폭죽 효과 스타일 */
+.firework {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: transparent; /* 초기에는 투명 */
+    border-radius: 50%;
+    pointer-events: none; /* 클릭 이벤트 무시 */
+    animation: firework-burst 0.8s ease-out forwards; /* 애니메이션 적용 */
+    opacity: 0; /* 초기 투명 */
+    transform: scale(0); /* 초기 크기 0 */
+}
+
+@keyframes firework-burst {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    10% {
+        transform: scale(0.5);
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.7), 0 0 40px rgba(255, 165, 0, 0.7);
+    }
+    30% {
+        transform: scale(1);
+        opacity: 0.8;
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.7), 0 0 60px rgba(255, 165, 0, 0.7), 0 0 90px rgba(255, 0, 0, 0.7);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0), 0 0 100px rgba(255, 165, 0, 0), 0 0 150px rgba(255, 0, 0, 0);
+    }
+}
