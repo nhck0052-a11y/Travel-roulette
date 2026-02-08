@@ -1,7 +1,7 @@
 const countries = [
     { 
         key: 'japan', 
-        flag: '🇯🇵', 
+        countryCode: 'JP',
         weight: 20, 
         colorPalette: {
             primary: '#E53935', // Red
@@ -11,7 +11,7 @@ const countries = [
     },
     { 
         key: 'switzerland', 
-        flag: '🇨🇭', 
+        countryCode: 'CH',
         weight: 19, 
         colorPalette: {
             primary: '#D32F2F', // Red
@@ -21,7 +21,7 @@ const countries = [
     },
     { 
         key: 'italy', 
-        flag: '🇮🇹', 
+        countryCode: 'IT',
         weight: 18, 
         colorPalette: {
             primary: '#008544', // Green
@@ -31,7 +31,7 @@ const countries = [
     },
     { 
         key: 'france', 
-        flag: '🇫🇷', 
+        countryCode: 'FR',
         weight: 17, 
         colorPalette: {
             primary: '#002654', // Dark Blue
@@ -41,7 +41,7 @@ const countries = [
     },
     { 
         key: 'spain', 
-        flag: '🇪🇸', 
+        countryCode: 'ES',
         weight: 16, 
         colorPalette: {
             primary: '#AA151B', // Red
@@ -51,7 +51,7 @@ const countries = [
     },
     { 
         key: 'newzealand', 
-        flag: '🇳🇿', 
+        countryCode: 'NZ',
         weight: 15, 
         colorPalette: {
             primary: '#00247D', // Dark Blue
@@ -61,7 +61,7 @@ const countries = [
     },
     { 
         key: 'thailand', 
-        flag: '🇹🇭', 
+        countryCode: 'TH',
         weight: 14, 
         colorPalette: {
             primary: '#F4F5F8', // White
@@ -71,7 +71,7 @@ const countries = [
     },
     { 
         key: 'canada', 
-        flag: '🇨🇦', 
+        countryCode: 'CA',
         weight: 13, 
         colorPalette: {
             primary: '#F00000', // Red
@@ -81,7 +81,7 @@ const countries = [
     },
     { 
         key: 'portugal', 
-        flag: '🇵🇹', 
+        countryCode: 'PT',
         weight: 12, 
         colorPalette: {
             primary: '#044234', // Green
@@ -91,7 +91,7 @@ const countries = [
     },
     { 
         key: 'australia', 
-        flag: '🇦🇺', 
+        countryCode: 'AU',
         weight: 11, 
         colorPalette: {
             primary: '#00008B', // Dark Blue
@@ -101,7 +101,7 @@ const countries = [
     },
     { 
         key: 'czechrepublic', 
-        flag: '🇨🇿', 
+        countryCode: 'CZ',
         weight: 10, 
         colorPalette: {
             primary: '#11457E', // Blue
@@ -111,7 +111,7 @@ const countries = [
     },
     { 
         key: 'iceland', 
-        flag: '🇮🇸', 
+        countryCode: 'IS',
         weight: 9, 
         colorPalette: {
             primary: '#02529C', // Blue
@@ -121,7 +121,7 @@ const countries = [
     },
     { 
         key: 'greece', 
-        flag: '🇬🇷', 
+        countryCode: 'GR',
         weight: 8, 
         colorPalette: {
             primary: '#0D5EAF', // Blue
@@ -131,7 +131,7 @@ const countries = [
     },
     { 
         key: 'singapore', 
-        flag: '🇸🇬', 
+        countryCode: 'SG',
         weight: 7, 
         colorPalette: {
             primary: '#EF2B2D', // Red
@@ -141,7 +141,7 @@ const countries = [
     },
     { 
         key: 'austria', 
-        flag: '🇦🇹', 
+        countryCode: 'AT',
         weight: 6, 
         colorPalette: {
             primary: '#ED2939', // Red
@@ -151,7 +151,7 @@ const countries = [
     },
     { 
         key: 'netherlands', 
-        flag: '🇳🇱', 
+        countryCode: 'NL',
         weight: 5, 
         colorPalette: {
             primary: '#AD1519', // Red
@@ -161,7 +161,7 @@ const countries = [
     },
     { 
         key: 'vietnam', 
-        flag: '🇻🇳', 
+        countryCode: 'VN',
         weight: 4, 
         colorPalette: {
             primary: '#DA251D', // Red
@@ -171,7 +171,7 @@ const countries = [
     },
     { 
         key: 'germany', 
-        flag: '🇩🇪', 
+        countryCode: 'DE',
         weight: 3, 
         colorPalette: {
             primary: '#000000', // Black
@@ -181,7 +181,7 @@ const countries = [
     },
     { 
         key: 'unitedkingdom', 
-        flag: '🇬🇧', 
+        countryCode: 'GB',
         weight: 2, 
         colorPalette: {
             primary: '#00247D', // Dark Blue
@@ -191,7 +191,7 @@ const countries = [
     },
     { 
         key: 'indonesia', 
-        flag: '🇮🇩', 
+        countryCode: 'ID',
         weight: 1, 
         colorPalette: {
             primary: '#CC0000', // Red
@@ -205,17 +205,19 @@ const drawButton = document.getElementById('draw-button');
 const resultDiv = document.getElementById('result');
 
 drawButton.addEventListener('click', () => {
-    resultDiv.textContent = translations[currentLang].drawing_text; // MODIFIED LINE
+    resultDiv.textContent = translations[currentLang].drawing_text;
     // 이전에 생성된 폭죽 요소들을 제거
     document.querySelectorAll('.firework').forEach(f => f.remove());
 
     setTimeout(() => {
         const selectedCountry = getRandomCountry();
+        const flagImageUrl = `https://flagcdn.com/w40/${selectedCountry.countryCode.toLowerCase()}.png`; // Using w40 for 40px width
+
         resultDiv.innerHTML = `
-            <h2>${translations[currentLang].congratulations_prefix} <br>${translations[currentLang]['country_name_' + selectedCountry.key]} ${selectedCountry.flag}${translations[currentLang].congratulations_suffix}</h2>
+            <h2>${translations[currentLang].congratulations_prefix} <br>${translations[currentLang]['country_name_' + selectedCountry.key]} <img src="${flagImageUrl}" alt="${selectedCountry.key} flag" class="country-flag">${translations[currentLang].congratulations_suffix}</h2>
             <p class="country-description">${translations[currentLang].country_description_prefix} ${translations[currentLang]['country_description_' + selectedCountry.key]}</p>
             <p class="season-info">${translations[currentLang].season_info_prefix} ${translations[currentLang]['country_season_' + selectedCountry.key]}</p>
-        `; // MODIFIED BLOCK
+        `;
         applyCountryStyles(selectedCountry.colorPalette); // Apply dynamic styles
         createFireworks(); // 폭죽 효과 트리거
     }, 2000);
