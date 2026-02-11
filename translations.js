@@ -13,6 +13,7 @@ const translations = {
         email_label: "이메일:",
         message_label: "메시지:",
         send_button: "보내기",
+        reset_button: "홈으로 돌아가기",
         country_description_prefix: "여행지 설명:",
         season_info_prefix: "성수기/비성수기 정보:",
         country_name_japan: "일본",
@@ -74,7 +75,34 @@ const translations = {
         country_season_unitedkingdom: "여름(6~8월)이 성수기입니다.",
         country_name_indonesia: "인도네시아",
         country_description_indonesia: "다양한 문화와 아름다운 섬들이 매력적인 인도네시아! 발리의 이국적인 해변부터 자바의 고대 사원까지, 다채로운 매력을 경험해 보세요.",
-        country_season_indonesia: "건기(4~10월)가 성수기입니다."
+        country_season_indonesia: "건기(4~10월)가 성수기입니다.",
+
+        // New keys for expanded data
+        why_visit_prefix: "이곳을 방문해야 하는 이유:",
+        japan_why_visit_text: "전통과 현대가 공존하는 독특한 문화, 아름다운 자연, 그리고 세계적인 미식을 경험할 수 있습니다.",
+        cuisine_heading: "대표 음식",
+        attractions_heading: "주요 관광지",
+        etiquette_heading: "여행 에티켓",
+        phrases_heading: "필수 회화",
+        currency_heading: "통화 정보",
+        visa_heading: "비자 정보",
+        visa_link_text: "자세한 비자 정보 확인",
+
+        cuisine_name_sushi: "스시",
+        cuisine_name_ramen: "라멘",
+        cuisine_name_tempura: "튀김",
+
+        attraction_name_mount_fuji: "후지산",
+        attraction_name_tokyo_skytree: "도쿄 스카이트리",
+        attraction_name_kiyomizu_dera: "기요미즈데라",
+
+        etiquette_bowing: "인사할 때 절하기",
+        etiquette_no_tipping: "팁 문화 없음",
+        etiquette_shoe_removal: "실내에서 신발 벗기",
+
+        phrase_key_hello_jp: "안녕하세요",
+        phrase_key_thank_you_jp: "감사합니다",
+        japanese_yen: "일본 엔"
     },
     en: {
         app_title: "Travel Destination Roulette",
@@ -90,6 +118,8 @@ const translations = {
         email_label: "Email:",
         message_label: "Message:",
         send_button: "Send",
+        reset_button: "Go back to Home",
+        reset_button: "Go back to Home", // New key
         country_description_prefix: "Description:",
         season_info_prefix: "Peak/Off-peak Season:",
         country_name_japan: "Japan",
@@ -151,7 +181,34 @@ const translations = {
         country_season_unitedkingdom: "Summer (June-August) is the peak season.",
         country_name_indonesia: "Indonesia",
         country_description_indonesia: "Indonesia, a charming country with diverse cultures and beautiful islands! Experience diverse charms from the exotic beaches of Bali to the ancient temples of Java.",
-        country_season_indonesia: "The dry season (April-October) is the peak season."
+        country_season_indonesia: "The dry season (April-October) is the peak season.",
+
+        // New keys for expanded data
+        why_visit_prefix: "Why visit here:",
+        japan_why_visit_text: "Experience a unique culture where tradition and modernity coexist, stunning natural beauty, and world-class cuisine.",
+        cuisine_heading: "Signature Dishes",
+        attractions_heading: "Main Attractions",
+        etiquette_heading: "Travel Etiquette",
+        phrases_heading: "Essential Phrases",
+        currency_heading: "Currency Information",
+        visa_heading: "Visa Information",
+        visa_link_text: "Check detailed visa information",
+
+        cuisine_name_sushi: "Sushi",
+        cuisine_name_ramen: "Ramen",
+        cuisine_name_tempura: "Tempura",
+
+        attraction_name_mount_fuji: "Mount Fuji",
+        attraction_name_tokyo_skytree: "Tokyo Skytree",
+        attraction_name_kiyomizu_dera: "Kiyomizu-dera Temple",
+
+        etiquette_bowing: "Bowing when greeting",
+        etiquette_no_tipping: "No tipping culture",
+        etiquette_shoe_removal: "Remove shoes indoors",
+
+        phrase_key_hello_jp: "Hello",
+        phrase_key_thank_you_jp: "Thank you",
+        japanese_yen: "Japanese Yen"
     },
     ja: {
         app_title: "旅行先ルーレット",
@@ -167,6 +224,7 @@ const translations = {
         email_label: "メールアドレス:",
         message_label: "メッセージ:",
         send_button: "送信",
+        reset_button: "ホームに戻る",
         country_description_prefix: "国説明:",
         season_info_prefix: "ベストシーズン情報:",
         country_name_japan: "日本",
@@ -228,7 +286,34 @@ const translations = {
         country_season_unitedkingdom: "夏（6月～8月）がベストシーズンです。",
         country_name_indonesia: "インドネシア",
         country_description_indonesia: "多様な文化と美しい島々が魅力的なインドネシア！バリのエキゾチックなビーチからジャワの古代寺院まで、多様な魅力を体験してください。",
-        country_season_indonesia: "乾季（4月～10月）がベストシーズンです。"
+        country_season_indonesia: "乾季（4月～10月）がベストシーズンです。",
+
+        // New keys for expanded data
+        why_visit_prefix: "ここを訪れる理由:",
+        japan_why_visit_text: "伝統と現代が共存するユニークな文化、息をのむような自然美、そして世界クラスの料理を体験できます。",
+        cuisine_heading: "代表料理",
+        attractions_heading: "主要観光地",
+        etiquette_heading: "旅行エチケット",
+        phrases_heading: "必須会話",
+        currency_heading: "通貨情報",
+        visa_heading: "ビザ情報",
+        visa_link_text: "詳細なビザ情報を確認",
+
+        cuisine_name_sushi: "寿司",
+        cuisine_name_ramen: "ラーメン",
+        cuisine_name_tempura: "天ぷら",
+
+        attraction_name_mount_fuji: "富士山",
+        attraction_name_tokyo_skytree: "東京スカイツリー",
+        attraction_name_kiyomizu_dera: "清水寺",
+
+        etiquette_bowing: "挨拶時にお辞儀をする",
+        etiquette_no_tipping: "チップの習慣なし",
+        etiquette_shoe_removal: "室内では靴を脱ぐ",
+
+        phrase_key_hello_jp: "こんにちは",
+        phrase_key_thank_you_jp: "ありがとう",
+        japanese_yen: "日本円"
     },
     zh: {
         app_title: "旅行目的地轮盘",
@@ -244,6 +329,7 @@ const translations = {
         email_label: "电子邮件:",
         message_label: "留言:",
         send_button: "发送",
+        reset_button: "返回主页",
         country_description_prefix: "国家描述:",
         season_info_prefix: "旺季/淡季信息:",
         country_name_japan: "日本",
@@ -305,7 +391,34 @@ const translations = {
         country_season_unitedkingdom: "夏季（6月至8月）是旺季。",
         country_name_indonesia: "印度尼西亚",
         country_description_indonesia: "印度尼西亚，一个拥有多元文化和美丽岛屿的迷人国家！从巴厘岛异国情调的海滩到爪哇古老的寺庙，体验其多样的魅力。",
-        country_season_indonesia: "旱季（4月至10月）是旺季。"
+        country_season_indonesia: "旱季（4月至10月）是旺季。",
+
+        // New keys for expanded data
+        why_visit_prefix: "为何选择此地:",
+        japan_why_visit_text: "体验传统与现代并存的独特文化、令人惊叹的自然风光和世界一流的美食。",
+        cuisine_heading: "特色美食",
+        attractions_heading: "主要景点",
+        etiquette_heading: "旅游礼仪",
+        phrases_heading: "常用短语",
+        currency_heading: "货币信息",
+        visa_heading: "签证信息",
+        visa_link_text: "查看详细签证信息",
+
+        cuisine_name_sushi: "寿司",
+        cuisine_name_ramen: "拉面",
+        cuisine_name_tempura: "天妇罗",
+
+        attraction_name_mount_fuji: "富士山",
+        attraction_name_tokyo_skytree: "东京晴空塔",
+        attraction_name_kiyomizu_dera: "清水寺",
+
+        etiquette_bowing: "打招呼时鞠躬",
+        etiquette_no_tipping: "无小费文化",
+        etiquette_shoe_removal: "室内脱鞋",
+
+        phrase_key_hello_jp: "你好",
+        phrase_key_thank_you_jp: "谢谢",
+        japanese_yen: "日元"
     }
 };
 

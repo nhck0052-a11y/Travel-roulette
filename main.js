@@ -7,7 +7,30 @@ const countries = [
             primary: '#E53935', // Red
             secondary: '#FFEBEE', // Light Red
             background: 'linear-gradient(to right, #E53935, #EF5350)'
-        }
+        },
+        cuisine: [
+            { name_key: 'sushi', image: 'https://images.unsplash.com/photo-1579822606562-b13c7c222ce0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+            { name_key: 'ramen', image: 'https://images.unsplash.com/photo-1582046200212-09b674843b46?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+            { name_key: 'tempura', image: 'https://images.unsplash.com/photo-1622378931168-b769213197ef?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
+        ],
+        attractions: [
+            { name_key: 'mount_fuji', image: 'https://images.unsplash.com/photo-1579979069677-4b77f98d1a1b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+            { name_key: 'tokyo_skytree', image: 'https://images.unsplash.com/photo-1540602058-f7b7f1e6f477?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+            { name_key: 'kiyomizu_dera', image: 'https://images.unsplash.com/photo-1541888946777-6d2740a33116?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
+        ],
+        etiquette: [
+            { key: 'bowing' },
+            { key: 'no_tipping' },
+            { key: 'shoe_removal' }
+        ],
+        phrases: [
+            { key: 'hello_jp', phrase: 'こんにちは (Konnichiwa)' },
+            { key: 'thank_you_jp', phrase: 'ありがとう (Arigato)' }
+        ],
+        currency: { name_key: 'japanese_yen', symbol: '¥', code: 'JPY' },
+        visa_link: 'https://www.mofa.go.jp/j_info/visit/visa/index.html', // Example link
+        why_visit: 'japan_why_visit_text', // This will be a key for translations.js
+        image: 'https://images.unsplash.com/photo-1542051841-32fd94921980?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' // Main image for Japan
     },
     { 
         key: 'switzerland', 
@@ -203,25 +226,115 @@ const countries = [
 
 const drawButton = document.getElementById('draw-button');
 const resultDiv = document.getElementById('result');
+const resetButton = document.getElementById('reset-button'); // Get the new reset button
 
 drawButton.addEventListener('click', () => {
     resultDiv.textContent = translations[currentLang].drawing_text;
     // 이전에 생성된 폭죽 요소들을 제거
     document.querySelectorAll('.firework').forEach(f => f.remove());
 
+    drawButton.style.display = 'none'; // Hide the draw button
+    resetButton.style.display = 'none'; // Ensure reset button is hidden during drawing
+
     setTimeout(() => {
         const selectedCountry = getRandomCountry();
         const flagImageUrl = `https://flagcdn.com/w40/${selectedCountry.countryCode.toLowerCase()}.png`; // Using w40 for 40px width
 
         resultDiv.innerHTML = `
-            <h2>${translations[currentLang].congratulations_prefix} <br>${translations[currentLang]['country_name_' + selectedCountry.key]} <img src="${flagImageUrl}" alt="${selectedCountry.key} flag" class="country-flag">${translations[currentLang].congratulations_suffix}</h2>
-            <p class="country-description">${translations[currentLang].country_description_prefix} ${translations[currentLang]['country_description_' + selectedCountry.key]}</p>
-            <p class="season-info">${translations[currentLang].season_info_prefix} ${translations[currentLang]['country_season_' + selectedCountry.key]}</p>
+            <div class="country-detail-card">
+                <img src="${selectedCountry.image}" alt="${selectedCountry.key}" class="country-main-image">
+                <h2 class="country-name-display">
+                    ${translations[currentLang].congratulations_prefix} ${translations[currentLang]['country_name_' + selectedCountry.key]} 
+                    <img src="${flagImageUrl}" alt="${selectedCountry.key} flag" class="country-flag">
+                    ${translations[currentLang].congratulations_suffix}
+                </h2>
+                <p class="country-why-visit">${translations[currentLang].why_visit_prefix} ${translations[currentLang][selectedCountry.why_visit]}</p>
+                <p class="season-info">${translations[currentLang].season_info_prefix} ${translations[currentLang]['country_season_' + selectedCountry.key]}</p>
+
+                <button id="save-to-bucketlist-button" class="action-button" data-i18n="save_to_bucketlist"></button>
+
+                <div class="info-sections-grid">
+                    <div class="info-section-item">
+                        <h3>${translations[currentLang].cuisine_heading}</h3>
+                        <ul class="cuisine-list">
+                            ${selectedCountry.cuisine.map(item => `
+                                <li>
+                                    <img src="${item.image}" alt="${item.name_key}" class="cuisine-image">
+                                    <span>${translations[currentLang]['cuisine_name_' + item.name_key]}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="info-section-item">
+                        <h3>${translations[currentLang].attractions_heading}</h3>
+                        <ul class="attractions-list">
+                            ${selectedCountry.attractions.map(item => `
+                                <li>
+                                    <img src="${item.image}" alt="${item.name_key}" class="attraction-image">
+                                    <span>${translations[currentLang]['attraction_name_' + item.name_key]}</span>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="info-sections-grid">
+                    <div class="info-section-item">
+                        <h3>${translations[currentLang].etiquette_heading}</h3>
+                        <ul class="etiquette-list">
+                            ${selectedCountry.etiquette.map(item => `
+                                <li>${translations[currentLang]['etiquette_' + item.key]}</li>
+                            `).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="info-section-item">
+                        <h3>${translations[currentLang].phrases_heading}</h3>
+                        <ul class="phrases-list">
+                            ${selectedCountry.phrases.map(item => `
+                                <li><strong>${translations[currentLang]['phrase_key_' + item.key]}:</strong> ${item.phrase}</li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="country-meta-info">
+                    <h4>${translations[currentLang].currency_heading}</h4>
+                    <p>${translations[currentLang]['currency_name_' + selectedCountry.currency.name_key]} (${selectedCountry.currency.symbol} ${selectedCountry.currency.code})</p>
+                    <h4>${translations[currentLang].visa_heading}</h4>
+                    <p><a href="${selectedCountry.visa_link}" target="_blank">${translations[currentLang].visa_link_text}</a></p>
+                </div>
+            </div>
         `;
         applyCountryStyles(selectedCountry.colorPalette); // Apply dynamic styles
         createFireworks(); // 폭죽 효과 트리거
+
+        resetButton.textContent = translations[currentLang].reset_button; // Set button text from translation
+        resetButton.style.display = 'block'; // Show the reset button
     }, 2000);
 });
+
+// Event listener for the new reset button
+if (resetButton) { // Check if resetButton exists before adding event listener
+    resetButton.addEventListener('click', () => {
+        resultDiv.innerHTML = ''; // Clear the result display
+        document.querySelectorAll('.firework').forEach(f => f.remove()); // Remove any lingering fireworks
+
+        // Reset styles to default
+        document.body.style.background = 'linear-gradient(to right, var(--primary-color), var(--secondary-color))';
+        document.documentElement.style.setProperty('--primary-color', '#ff7e5f'); // Default primary color
+        document.documentElement.style.setProperty('--secondary-color', '#feb47b'); // Default secondary color
+
+        // Show the draw button and hide the reset button
+        drawButton.style.display = 'block';
+        resetButton.style.display = 'none';
+
+        // Reset main heading and sub-heading text
+        document.querySelector('h1[data-i18n="main_heading"]').textContent = translations[currentLang].main_heading;
+        document.querySelector('p[data-i18n="sub_heading"]').textContent = translations[currentLang].sub_heading;
+    });
+}
 
 function getRandomCountry() {
     const totalWeight = countries.reduce((sum, country) => sum + country.weight, 0);
