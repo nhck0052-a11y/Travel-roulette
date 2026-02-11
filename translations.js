@@ -14,8 +14,50 @@ const translations = {
         message_label: "메시지:",
         send_button: "보내기",
         reset_button: "홈으로 돌아가기",
+        saved_to_bucketlist: "여행 버킷리스트에 추가되었습니다!",
+        already_in_bucketlist: "이미 버킷리스트에 있는 여행지입니다!",
+        bucket_list_heading: "나의 여행 버킷리스트",
+        bucket_list_link: "버킷리스트",
+        empty_bucket_list_message: "아직 버킷리스트에 추가된 여행지가 없습니다. 여행지를 뽑고 버킷리스트에 추가해보세요!",
+        remove_from_bucketlist: "삭제",
+        share_result: "결과 공유",
+        share_title: "나의 다음 여행지는?!",
+        share_text_prefix: "두근두근! 나의 다음 여행지는",
+        share_text_suffix: "입니다! 여러분도 여행지를 뽑아보세요!",
+        share_clipboard_message: "공유 링크가 클립보드에 복사되었습니다.",
+        share_error_message: "공유 링크 복사에 실패했습니다. 직접 복사해주세요.",
         country_description_prefix: "여행지 설명:",
         season_info_prefix: "성수기/비성수기 정보:",
+        why_visit_prefix: "이곳을 방문해야 하는 이유:",
+        japan_why_visit_text: "전통과 현대가 공존하는 독특한 문화, 아름다운 자연, 그리고 세계적인 미식을 경험할 수 있습니다.",
+        did_you_know_heading: "알고 계셨나요?",
+        japan_fact_text: "일본에는 1,000년 이상 된 기업이 7개 이상 있습니다.",
+        user_reviews_heading: "여행자 리뷰",
+        japan_review_1: "일본 여행은 정말 최고였어요! 깨끗하고 안전하며, 음식도 너무 맛있었습니다. 다시 방문하고 싶어요!",
+        japan_review_2: "후지산의 웅장함과 도쿄의 화려함이 인상 깊었어요. 친절한 현지인들 덕분에 더욱 즐거운 여행이었습니다.",
+        cuisine_heading: "대표 음식",
+        attractions_heading: "주요 관광지",
+        etiquette_heading: "여행 에티켓",
+        phrases_heading: "필수 회화",
+        currency_heading: "통화 정보",
+        visa_heading: "비자 정보",
+        visa_link_text: "자세한 비자 정보 확인",
+
+        cuisine_name_sushi: "스시",
+        cuisine_name_ramen: "라멘",
+        cuisine_name_tempura: "튀김",
+
+        attraction_name_mount_fuji: "후지산",
+        attraction_name_tokyo_skytree: "도쿄 스카이트리",
+        attraction_name_kiyomizu_dera: "기요미즈데라",
+
+        etiquette_bowing: "인사할 때 절하기",
+        etiquette_no_tipping: "팁 문화 없음",
+        etiquette_shoe_removal: "실내에서 신발 벗기",
+
+        phrase_key_hello_jp: "안녕하세요",
+        phrase_key_thank_you_jp: "감사합니다",
+        japanese_yen: "일본 엔",
         country_name_japan: "일본",
         country_description_japan: "첨단 기술과 고유한 문화가 공존하는 매력적인 나라, 일본으로 떠나보세요! 아름다운 자연 경관과 맛있는 음식, 그리고 현대적인 도시의 활기가 당신을 기다립니다.",
         country_season_japan: "봄(3~5월)과 가을(9~11월)이 성수기입니다.",
@@ -75,34 +117,7 @@ const translations = {
         country_season_unitedkingdom: "여름(6~8월)이 성수기입니다.",
         country_name_indonesia: "인도네시아",
         country_description_indonesia: "다양한 문화와 아름다운 섬들이 매력적인 인도네시아! 발리의 이국적인 해변부터 자바의 고대 사원까지, 다채로운 매력을 경험해 보세요.",
-        country_season_indonesia: "건기(4~10월)가 성수기입니다.",
-
-        // New keys for expanded data
-        why_visit_prefix: "이곳을 방문해야 하는 이유:",
-        japan_why_visit_text: "전통과 현대가 공존하는 독특한 문화, 아름다운 자연, 그리고 세계적인 미식을 경험할 수 있습니다.",
-        cuisine_heading: "대표 음식",
-        attractions_heading: "주요 관광지",
-        etiquette_heading: "여행 에티켓",
-        phrases_heading: "필수 회화",
-        currency_heading: "통화 정보",
-        visa_heading: "비자 정보",
-        visa_link_text: "자세한 비자 정보 확인",
-
-        cuisine_name_sushi: "스시",
-        cuisine_name_ramen: "라멘",
-        cuisine_name_tempura: "튀김",
-
-        attraction_name_mount_fuji: "후지산",
-        attraction_name_tokyo_skytree: "도쿄 스카이트리",
-        attraction_name_kiyomizu_dera: "기요미즈데라",
-
-        etiquette_bowing: "인사할 때 절하기",
-        etiquette_no_tipping: "팁 문화 없음",
-        etiquette_shoe_removal: "실내에서 신발 벗기",
-
-        phrase_key_hello_jp: "안녕하세요",
-        phrase_key_thank_you_jp: "감사합니다",
-        japanese_yen: "일본 엔"
+        country_season_indonesia: "건기(4~10월)가 성수기입니다."
     },
     en: {
         app_title: "Travel Destination Roulette",
@@ -119,9 +134,50 @@ const translations = {
         message_label: "Message:",
         send_button: "Send",
         reset_button: "Go back to Home",
-        reset_button: "Go back to Home", // New key
+        saved_to_bucketlist: "Added to travel bucket list!",
+        already_in_bucketlist: "Already in bucket list!",
+        bucket_list_heading: "My Travel Bucket List",
+        bucket_list_link: "Bucket List",
+        empty_bucket_list_message: "No travel destinations added to the bucket list yet. Draw a destination and add it!",
+        remove_from_bucketlist: "Remove",
+        share_result: "Share Result",
+        share_title: "My Next Travel Destination?!",
+        share_text_prefix: "Exciting! My next travel destination is",
+        share_text_suffix: "! Draw your own destination!",
+        share_clipboard_message: "Share link copied to clipboard.",
+        share_error_message: "Failed to copy share link. Please copy it manually.",
         country_description_prefix: "Description:",
         season_info_prefix: "Peak/Off-peak Season:",
+        why_visit_prefix: "Why visit here:",
+        japan_why_visit_text: "Experience a unique culture where tradition and modernity coexist, stunning natural beauty, and world-class cuisine.",
+        did_you_know_heading: "Did You Know?", // New key
+        japan_fact_text: "Japan has over 7 companies that are more than 1,000 years old.", // New key
+        user_reviews_heading: "Traveler Reviews", // New key
+        japan_review_1: "Japan was absolutely amazing! Clean, safe, and the food was delicious. I can't wait to visit again!", // New key
+        japan_review_2: "Mount Fuji's grandeur and Tokyo's vibrancy were impressive. The friendly locals made the trip even more enjoyable.", // New key
+        cuisine_heading: "Signature Dishes",
+        attractions_heading: "Main Attractions",
+        etiquette_heading: "Travel Etiquette",
+        phrases_heading: "Essential Phrases",
+        currency_heading: "Currency Information",
+        visa_heading: "Visa Information",
+        visa_link_text: "Check detailed visa information",
+
+        cuisine_name_sushi: "Sushi",
+        cuisine_name_ramen: "Ramen",
+        cuisine_name_tempura: "Tempura",
+
+        attraction_name_mount_fuji: "Mount Fuji",
+        attraction_name_tokyo_skytree: "Tokyo Skytree",
+        attraction_name_kiyomizu_dera: "Kiyomizu-dera Temple",
+
+        etiquette_bowing: "Bowing when greeting",
+        etiquette_no_tipping: "No tipping culture",
+        etiquette_shoe_removal: "Remove shoes indoors",
+
+        phrase_key_hello_jp: "Hello",
+        phrase_key_thank_you_jp: "Thank you",
+        japanese_yen: "Japanese Yen",
         country_name_japan: "Japan",
         country_description_japan: "Embark on a journey to Japan, a fascinating country where advanced technology coexists with unique culture! Beautiful natural landscapes, delicious food, and the vibrancy of modern cities await you.",
         country_season_japan: "Spring (March-May) and Autumn (September-November) are peak seasons.",
@@ -181,34 +237,7 @@ const translations = {
         country_season_unitedkingdom: "Summer (June-August) is the peak season.",
         country_name_indonesia: "Indonesia",
         country_description_indonesia: "Indonesia, a charming country with diverse cultures and beautiful islands! Experience diverse charms from the exotic beaches of Bali to the ancient temples of Java.",
-        country_season_indonesia: "The dry season (April-October) is the peak season.",
-
-        // New keys for expanded data
-        why_visit_prefix: "Why visit here:",
-        japan_why_visit_text: "Experience a unique culture where tradition and modernity coexist, stunning natural beauty, and world-class cuisine.",
-        cuisine_heading: "Signature Dishes",
-        attractions_heading: "Main Attractions",
-        etiquette_heading: "Travel Etiquette",
-        phrases_heading: "Essential Phrases",
-        currency_heading: "Currency Information",
-        visa_heading: "Visa Information",
-        visa_link_text: "Check detailed visa information",
-
-        cuisine_name_sushi: "Sushi",
-        cuisine_name_ramen: "Ramen",
-        cuisine_name_tempura: "Tempura",
-
-        attraction_name_mount_fuji: "Mount Fuji",
-        attraction_name_tokyo_skytree: "Tokyo Skytree",
-        attraction_name_kiyomizu_dera: "Kiyomizu-dera Temple",
-
-        etiquette_bowing: "Bowing when greeting",
-        etiquette_no_tipping: "No tipping culture",
-        etiquette_shoe_removal: "Remove shoes indoors",
-
-        phrase_key_hello_jp: "Hello",
-        phrase_key_thank_you_jp: "Thank you",
-        japanese_yen: "Japanese Yen"
+        country_season_indonesia: "The dry season (April-October) is the peak season."
     },
     ja: {
         app_title: "旅行先ルーレット",
@@ -224,73 +253,28 @@ const translations = {
         email_label: "メールアドレス:",
         message_label: "メッセージ:",
         send_button: "送信",
-        reset_button: "ホームに戻る",
+        reset_button: "ホームに戻る", // New key
+        saved_to_bucketlist: "旅行バケットリストに追加されました！", // New key
+        already_in_bucketlist: "すでにバケットリストにある旅行先です！", // New key
+        bucket_list_heading: "私の旅行バケットリスト", // New key
+        bucket_list_link: "バケットリスト", // New key
+        empty_bucket_list_message: "まだバケットリストに追加された旅行先がありません。旅行先を引いてバケットリストに追加してください！", // New key
+        remove_from_bucketlist: "削除", // New key
+        share_result: "結果を共有", // New key
+        share_title: "私の次の旅行先は？！", // New key
+        share_text_prefix: "ワクワク！私の次の旅行先は", // New key
+        share_text_suffix: "です！あなたも旅行先を引いてみよう！", // New key
+        share_clipboard_message: "共有リンクがクリップボードにコピーされました。", // New key
+        share_error_message: "共有リンクのコピーに失敗しました。手動でコピーしてください。", // New key
         country_description_prefix: "国説明:",
         season_info_prefix: "ベストシーズン情報:",
-        country_name_japan: "日本",
-        country_description_japan: "先進技術と独自の文化が共存する魅力的な国、日本へ旅立ちましょう！美しい自然景観と美味しい食べ物、そして現代的な都市の活気があなたを待っています。",
-        country_season_japan: "春（3月～5月）と秋（9月～11月）がベストシーズンです。",
-        country_name_switzerland: "スイス",
-        country_description_switzerland: "アルプスの壮大な自然と澄んだ空気、絵のように美しい村が調和するスイス！ハイキング、スキー、そして美しい湖で忘れられない思い出を作りましょう。",
-        country_season_switzerland: "夏（6月～8月）と冬（12月～2月）がベストシーズンです。",
-        country_name_italy: "イタリア",
-        country_description_italy: "輝かしい歴史と芸術、そして美食の国イタリア！ローマの遺跡からフィレンツェのルネサンス、ベネチアのロマンスまで、多彩な魅力を体験してください。",
-        country_season_italy: "春（4月～6月）と秋（9月～10月）がベストシーズンです。",
-        country_name_france: "フランス",
-        country_description_france: "芸術とロマンの国、フランス！パリのエッフェル塔からプロヴァンスのラベンダー畑まで、多様な魅力に満ちた場所で特別な体験を満喫してください。",
-        country_season_france: "春（4月～6月）と秋（9月～10月）がベストシーズンです。",
-        country_name_spain: "スペイン",
-        country_description_spain: "太陽の情熱と芸術が息づくスペイン！情熱的なフラメンコと美味しいタパス、ガウディの建築物がある魅力的な国です。",
-        country_season_spain: "春（4月～6月）と秋（9月～10月）がベストシーズンです。",
-        country_name_newzealand: "ニュージーランド",
-        country_description_newzealand: "大自然の驚異に満ちたニュージーランド！映画のような風景とダイナミックなアクティビティで冒険を楽しんでください。",
-        country_season_newzealand: "夏（12月～2月）がベストシーズンです。",
-        country_name_thailand: "タイ",
-        country_description_thailand: "黄金の寺院とエキゾチックなビーチ、活気あふれる市場が魅力的なタイ！美味しい屋台料理と温かい笑顔に満ちた場所で休暇を楽しんでください。",
-        country_season_thailand: "乾季（11月～2月）がベストシーズンです。",
-        country_name_canada: "カナダ",
-        country_description_canada: "広大な自然と多様な文化が共存するカナダ！ロッキー山脈の壮大さから都市の活気ある雰囲気まで、すべてを体験できます。",
-        country_season_canada: "夏（6月～8月）がベストシーズンです。",
-        country_name_portugal: "ポルトガル",
-        country_description_portugal: "美しい海岸線と歴史ある都市が魅力的なポルトガル！暖かい日差しの下で美味しいワインと新鮮な海鮮を楽しみながら、ゆったりとした時間を過ごしてください。",
-        country_season_portugal: "夏（6月～8月）がベストシーズンです。",
-        country_name_australia: "オーストラリア",
-        country_description_australia: "多様な野生生物と美しい自然景観が広がるオーストラリア！サーフィン、スキューバダイビング、アウトバック探検など、多彩な体験を楽しんでください。",
-        country_season_australia: "春（9月～11月）と秋（3月～5月）がベストシーズンです。",
-        country_name_czechrepublic: "チェコ",
-        country_description_czechrepublic: "中世の美しさを秘めた東欧の宝石、チェコ！プラハのロマンチックな街並みと歴史的な建造物があなたをおとぎ話の世界へ誘います。",
-        country_season_czechrepublic: "春（4月～6月）と秋（9月～10月）がベストシーズンです。",
-        country_name_iceland: "アイスランド",
-        country_description_iceland: "火と氷の国、アイスランド！神秘的なオーロラと氷河、温泉など、驚異的な自然の中で忘れられない体験を提供します。",
-        country_season_iceland: "夏（6月～8月）がベストシーズンです。",
-        country_name_greece: "ギリシャ",
-        country_description_greece: "古代文明の発祥地であり、美しいエーゲ海の国、ギリシャ！神話の世界のような風景と青い海が調和する幻想的な旅行を体験してください。",
-        country_season_greece: "夏（6月～9月）がベストシーズンです。",
-        country_name_singapore: "シンガポール",
-        country_description_singapore: "多様な文化が共存する未来都市、シンガポール！華やかな夜景と現代的な建築物、美食の饗宴を楽しみながら都市の魅力に浸ってください。",
-        country_season_singapore: "一年中温暖ですが、2月～4月が快適です。",
-        country_name_austria: "オーストリア",
-        country_description_austria: "音楽と芸術の国、オーストリア！壮大なアルプス山脈と美しい都市でクラシック音楽とともにゆったりとした休息を楽しんでください。",
-        country_season_austria: "夏（6月～8月）と冬（12月～2月）がベストシーズンです。",
-        country_name_netherlands: "オランダ",
-        country_description_netherlands: "風車とチューリップの国、オランダ！美しい運河と芸術作品、そして自由な雰囲気の中で特別な体験を満喫してください。",
-        country_season_netherlands: "春（4月～5月）と夏（6月～8月）がベストシーズンです。",
-        country_name_vietnam: "ベトナム",
-        country_description_vietnam: "美しい自然景観と豊かな文化遺産が魅力的なベトナム！ハロン湾の神秘的な風景と活気ある都市で特別な体験を満喫してください。",
-        country_season_vietnam: "乾季（11月～4月）がベストシーズンです。",
-        country_name_germany: "ドイツ",
-        country_description_germany: "歴史と現代が共存する魅力的な国、ドイツ！中世の城と現代的な都市景観、そして美味しいビールを楽しんでください。",
-        country_season_germany: "夏（6月～8月）とクリスマスシーズンがベストシーズンです。",
-        country_name_unitedkingdom: "イギリス",
-        country_description_unitedkingdom: "長い歴史と伝統、そして現代的な魅力が調和するイギリス！ロンドンの活気ある雰囲気と古風な建築物、美しい自然を満喫してください。",
-        country_season_unitedkingdom: "夏（6月～8月）がベストシーズンです。",
-        country_name_indonesia: "インドネシア",
-        country_description_indonesia: "多様な文化と美しい島々が魅力的なインドネシア！バリのエキゾチックなビーチからジャワの古代寺院まで、多様な魅力を体験してください。",
-        country_season_indonesia: "乾季（4月～10月）がベストシーズンです。",
-
-        // New keys for expanded data
         why_visit_prefix: "ここを訪れる理由:",
         japan_why_visit_text: "伝統と現代が共存するユニークな文化、息をのむような自然美、そして世界クラスの料理を体験できます。",
+        did_you_know_heading: "知っていましたか？", // New key
+        japan_fact_text: "日本には1,000年以上の歴史を持つ企業が7社以上あります。", // New key
+        user_reviews_heading: "旅行者のレビュー", // New key
+        japan_review_1: "日本旅行は本当に最高でした！清潔で安全で、食べ物もとても美味しかったです。また訪れたいです！", // New key
+        japan_review_2: "富士山の雄大さと東京の活気に感動しました。親切な地元の人々のおかげで、さらに楽しい旅行になりました。", // New key
         cuisine_heading: "代表料理",
         attractions_heading: "主要観光地",
         etiquette_heading: "旅行エチケット",
@@ -313,7 +297,67 @@ const translations = {
 
         phrase_key_hello_jp: "こんにちは",
         phrase_key_thank_you_jp: "ありがとう",
-        japanese_yen: "日本円"
+        japanese_yen: "日本円",
+        country_name_japan: "日本",
+        country_description_japan: "先進技術と独自の文化が共存する魅力的な国、日本へ旅立ちましょう！美しい自然景観と美味しい食べ物、そして現代的な都市の活気があなたを待っています。",
+        country_season_japan: "春（3月～5月）と秋（9月～11月）がベストシーズンです。",
+        country_name_switzerland: "スイス",
+        country_description_switzerland: "アルプスの壮大な自然と澄んだ空気、絵のように美しい村が調和するスイス！ハイキング、スキー、そして美しい湖で忘れられない思い出を作りましょう。",
+        country_season_switzerland: "夏（6月～8月）と冬（12月～2月）がベストシーズンです。",
+        country_name_italy: "イタリア",
+        country_description_italy: "輝かしい歴史と芸術、そして美食の国イタリア！ローマの遺跡からフィレンツェのルネサンス、ベネチアのロマンスまで、多彩な魅力を体験してください。",
+        country_season_italy: "春（4月～6月）と秋（9月～10月）がベストシーズンです。",
+        country_name_france: "フランス",
+        country_description_france: "芸術とロマンの国、フランス！パリのエッフェル塔からプロヴァンスのラベンダー畑まで、多様な魅力に満ちた場所で特別な体験を満喫してください。",
+        country_season_france: "春（4月～6月）と秋（9月～10月）がベストシーズンです。",
+        country_name_spain: "スペイン",
+        country_description_spain: "太陽の情熱と芸術が息づくスペイン！情熱的なフラメンコと美味しいタパス、ガウディの建築物がある魅力的な国です。",
+        country_season_spain: "春（4月～6月）と秋（9月～10月）がベストシーズンです。",
+        country_name_newzealand: "ニュージーランド",
+        country_description_newzealand: "大自然の驚異に満ちたニュージーランド！映画のような風景とダイナミックなアクティビティで冒険を楽しんでください。",
+        country_season_newzealand: "夏（12月～2月）がベストシーズンです。",
+        country_name_thailand: "タイ",
+        country_description_thailand: "黄金の寺院とエキゾチックなビーチ、活気あふれる市場が魅力的なタイ！美味しい屋台料理と温かい笑顔に満ちた場所で休暇を楽しんでください。",
+        country_season_thailand: "乾季（11月～2月）がベストシーズンです。",
+        country_name_canada: "カナダ",
+        country_description_canada: "広大な自然と多様な文化が共存하는 캐나다！ロッキー山脈の壮대함부터 도시의 활기찬 분위기까지、すべてのことを体験できます。",
+        country_season_canada: "夏（6月～8月）가ベストシーズンです。",
+        country_name_portugal: "ポルトガル",
+        country_description_portugal: "美しい海岸線と歴史ある都市が魅力的なポルトガル！暖かい日差しの下で美味しいワインと新鮮な海鮮を楽しみながら、ゆったりとした時間を過ごしてください。",
+        country_season_portugal: "夏（6月～8月）がベストシーズンです。",
+        country_name_australia: "オーストラリア",
+        country_description_australia: "多様な野生生物と美しい自然景観が広がるオーストラリア！サーフィン、スキューバダイビング、アウトバック探検など、多彩な体験を楽しんでください。",
+        country_season_australia: "春（9月～11月）と秋（3月～5月）がベストシーズンです。",
+        country_name_czechrepublic: "チェコ",
+        country_description_czechrepublic: "中世の美しさを秘めた東欧の宝石、チェコ！プラハのロマンチックな街並みと歴史的な建造物があなたをおとぎ話の世界へ誘います。",
+        country_season_czechrepublic: "春（4月～6月）と秋（9月～10月）がベストシーズンです。",
+        country_name_iceland: "アイスランド",
+        country_description_iceland: "火と氷の国、アイスランド！神秘的なオーロラと氷河、温泉など、驚異的な自然の中で忘れられない体験を提供します。",
+        country_season_iceland: "夏（6月～8月）がベストシーズンです。",
+        country_name_greece: "ギリシャ",
+        country_description_greece: "古代文明の発祥地であり、美しいエーゲ海の国、ギリシャ！神話の世界のような風景と青い海が調和する幻想的な旅行を体験してください。",
+        country_season_greece: "夏（6月～9月）がベストシーズンです。",
+        country_name_singapore: "シンガポール",
+        country_description_singapore: "多様な文化が共存하는 未来 都市, シンガポール！華やかな夜景と現代的な建築物、美食の饗宴を楽しみながら都市の魅力に浸ってください。",
+        country_season_singapore: "一年中温暖ですが、2月～4月が快適です。",
+        country_name_austria: "オーストリア",
+        country_description_austria: "音楽と芸術の国、オーストリア！壮大なアルプス山脈と美しい都市でクラシック音楽とともにゆったりとした休息を楽しんでください。",
+        country_season_austria: "夏（6月～8月）와 冬（12月～2月）가ベストシーズンです。",
+        country_name_netherlands: "네덜란드",
+        country_description_netherlands: "風車와 튤リップの 나라, オランダ！美しい運河と芸術作品、そして自由な雰囲気の中で特別な体験を満喫してください。",
+        country_season_netherlands: "春（4月～5月）와 夏（6月～8月）がベストシーズンです。",
+        country_name_vietnam: "ベトナム",
+        country_description_vietnam: "美しい自然景観과 豊かな文化遺産が魅力的なベトナム！ハロン湾의 神秘的な 風景과 活気ある都市で特別な体験を満喫してください。",
+        country_season_vietnam: "乾季（11月～4月）がベストシーズンです。",
+        country_name_germany: "ドイツ",
+        country_description_germany: "歴史と現代が共存する魅力的な国、ドイツ！中世の城と現代的な都市景観、そして美味しいビールを楽しんでください。",
+        country_season_germany: "夏（6月～8月）とクリスマスシーズンがベストシーズンです。",
+        country_name_unitedkingdom: "イギリス",
+        country_description_unitedkingdom: "長い歴史と伝統、そして現代的な魅力が調和하는 イギリス！ロンドンの活気ある雰囲気と古風な建築物、美しい自然を満喫してください。",
+        country_season_unitedkingdom: "夏（6月～8月）がベストシーズンです。",
+        country_name_indonesia: "インドネシア",
+        country_description_indonesia: "多様한 文化と美しい 島々が魅力的なインドネシア！バリのエキゾチックな海辺からジャワの古代寺院まで、多様な魅力を体験してください。",
+        country_season_indonesia: "乾季（4月～10月）がベストシーズンです。"
     },
     zh: {
         app_title: "旅行目的地轮盘",
@@ -329,9 +373,51 @@ const translations = {
         email_label: "电子邮件:",
         message_label: "留言:",
         send_button: "发送",
-        reset_button: "返回主页",
+        reset_button: "返回主页", // New key
+        saved_to_bucketlist: "已添加到旅行愿望清单！", // New key
+        already_in_bucketlist: "已在愿望清单中！", // New key
+        bucket_list_heading: "我的旅行愿望清单", // New key
+        bucket_list_link: "愿望清单", // New key
+        empty_bucket_list_message: "尚未将任何旅行目的地添加到愿望清单中。抽取一个目的地并将其添加到愿望清单！", // New key
+        remove_from_bucketlist: "移除", // New key
+        share_result: "分享结果", // New key
+        share_title: "我的下一个旅行目的地？！", // New key
+        share_text_prefix: "激动人心！我的下一个旅行目的地是", // New key
+        share_text_suffix: "！你也来抽取自己的目的地吧！", // New key
+        share_clipboard_message: "分享链接已复制到剪贴板。", // New key
+        share_error_message: "复制分享链接失败。请手动复制。", // New key
         country_description_prefix: "国家描述:",
         season_info_prefix: "旺季/淡季信息:",
+        why_visit_prefix: "为何选择此地:",
+        japan_why_visit_text: "体验传统与现代并存的独特文化、令人惊叹的自然风光和世界一流的美食。",
+        did_you_know_heading: "你知道吗？", // New key
+        japan_fact_text: "日本有7家以上拥有1000多年历史的公司。", // New key
+        user_reviews_heading: "旅行者评论", // New key
+        japan_review_1: "日本之旅真是太棒了！干净、安全，食物也很美味。我迫不及待想再次访问！", // New key
+        japan_review_2: "富士山的壮丽和东京的活力给我留下了深刻印象。友善的当地人让旅程更加愉快。", // New key
+        cuisine_heading: "特色美食",
+        attractions_heading: "主要景点",
+        etiquette_heading: "旅游礼仪",
+        phrases_heading: "常用短语",
+        currency_heading: "货币信息",
+        visa_heading: "签证信息",
+        visa_link_text: "查看详细签证信息",
+
+        cuisine_name_sushi: "寿司",
+        cuisine_name_ramen: "拉面",
+        cuisine_name_tempura: "天妇罗",
+
+        attraction_name_mount_fuji: "富士山",
+        attraction_name_tokyo_skytree: "东京晴空塔",
+        attraction_name_kiyomizu_dera: "清水寺",
+
+        etiquette_bowing: "打招呼时鞠躬",
+        etiquette_no_tipping: "无小费文化",
+        etiquette_shoe_removal: "室内脱鞋",
+
+        phrase_key_hello_jp: "你好",
+        phrase_key_thank_you_jp: "谢谢",
+        japanese_yen: "日元",
         country_name_japan: "日本",
         country_description_japan: "踏上日本之旅，这个迷人的国家高科技与独特文化并存！美丽的自然风光、美味的食物以及现代化城市的活力正等着你。",
         country_season_japan: "春季（3月至5月）和秋季（9月至11月）是旺季。",
@@ -391,34 +477,7 @@ const translations = {
         country_season_unitedkingdom: "夏季（6月至8月）是旺季。",
         country_name_indonesia: "印度尼西亚",
         country_description_indonesia: "印度尼西亚，一个拥有多元文化和美丽岛屿的迷人国家！从巴厘岛异国情调的海滩到爪哇古老的寺庙，体验其多样的魅力。",
-        country_season_indonesia: "旱季（4月至10月）是旺季。",
-
-        // New keys for expanded data
-        why_visit_prefix: "为何选择此地:",
-        japan_why_visit_text: "体验传统与现代并存的独特文化、令人惊叹的自然风光和世界一流的美食。",
-        cuisine_heading: "特色美食",
-        attractions_heading: "主要景点",
-        etiquette_heading: "旅游礼仪",
-        phrases_heading: "常用短语",
-        currency_heading: "货币信息",
-        visa_heading: "签证信息",
-        visa_link_text: "查看详细签证信息",
-
-        cuisine_name_sushi: "寿司",
-        cuisine_name_ramen: "拉面",
-        cuisine_name_tempura: "天妇罗",
-
-        attraction_name_mount_fuji: "富士山",
-        attraction_name_tokyo_skytree: "东京晴空塔",
-        attraction_name_kiyomizu_dera: "清水寺",
-
-        etiquette_bowing: "打招呼时鞠躬",
-        etiquette_no_tipping: "无小费文化",
-        etiquette_shoe_removal: "室内脱鞋",
-
-        phrase_key_hello_jp: "你好",
-        phrase_key_thank_you_jp: "谢谢",
-        japanese_yen: "日元"
+        country_season_indonesia: "旱季（4月至10月）是旺季。"
     }
 };
 
