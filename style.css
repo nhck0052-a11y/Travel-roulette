@@ -28,6 +28,24 @@ h1 {
     margin-bottom: 1rem;
 }
 
+/* New reset button styles */
+#reset-button {
+    background-color: var(--secondary-color); /* Use secondary color for distinction */
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 30px var(--secondary-color); /* Glow with secondary color */
+    margin-top: 1rem; /* Add some space above it */
+}
+
+#reset-button:hover {
+    transform: scale(1.1);
+}
+
 #draw-button {
     background-color: var(--primary-color); /* Use primary color for button */
     color: white;
@@ -231,3 +249,57 @@ h1 {
     border-radius: 4px; /* Slightly rounded corners */
     box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Small shadow for depth */
 }
+
+/* New Content Sections and Footer Styles */
+.content-sections {
+    width: 80%;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.info-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer nav a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav a:hover {
+    color: var(--secondary-color);
+}
+

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="app_title">여행지 랜덤 뽑기</title>
+    <title data-i18n="app_title"></title>
     <link rel="stylesheet" href="style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7447900045188794"
      crossorigin="anonymous"></script>
@@ -19,30 +19,60 @@
                 <option value="zh">中文</option>
             </select>
         </div>
-        <h1 data-i18n="main_heading">여행지 랜덤 뽑기!</h1>
-        <p data-i18n="sub_heading">어디로 떠나볼까요?</p>
-        <p class="small-note" data-i18n="small_note">오늘 당신의 운명은 20가지 멋진 나라 중 하나로 결정됩니다!</p>
-        <button id="draw-button" data-i18n="draw_button">지금 바로 확인!</button>
+        <h1 data-i18n="main_heading"></h1>
+        <p data-i18n="sub_heading"></p>
+        <p class="small-note" data-i18n="general_note"></p>
+        <button id="draw-button" data-i18n="draw_button"></button>
         <div id="result"></div>
+        <button id="reset-button" data-i18n="reset_button" style="display: none;"></button>
+    </div>
 
-        <div class="partnership-inquiry-widget">
-            <button id="toggle-inquiry-form" class="inquiry-button" data-i18n="partnership_inquiry">제휴 문의</button>
-            <div id="inquiry-form-content" class="hidden">
-                <h2 data-i18n="partnership_inquiry_heading">제휴 문의</h2>
+    <div class="content-sections">
+        <section id="about-us-section" class="info-section">
+            <h2 data-i18n="about_us_heading"></h2>
+            <p data-i18n="about_us_content"></p>
+        </section>
+
+        <section id="contact-us-section" class="info-section">
+            <h2 data-i18n="contact_us_heading"></h2>
+            <div id="inquiry-form-content">
                 <form action="https://formspree.io/f/xbdajoag" method="POST">
-                    <label for="email" data-i18n="email_label">
-                        이메일:
+                    <label for="email">
+                        <span data-i18n="email_label"></span>
                         <input type="email" name="email" id="email" required>
                     </label>
-                    <label for="message" data-i18n="message_label">
-                        메시지:
+                    <label for="message">
+                        <span data-i18n="message_label"></span>
                         <textarea name="message" id="message" required></textarea>
                     </label>
-                    <button type="submit" data-i18n="send_button">보내기</button>
+                    <button type="submit" data-i18n="send_button"></button>
                 </form>
             </div>
-        </div>
+        </section>
+
+        <section id="privacy-policy-section" class="info-section">
+            <h2 data-i18n="privacy_policy_heading"></h2>
+            <p data-i18n="privacy_policy_content"></p>
+        </section>
+
+        <section id="disclaimer-section" class="info-section">
+            <h2 data-i18n="disclaimer_heading"></h2>
+            <p data-i18n="disclaimer_content"></p>
+        </section>
     </div>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#about-us-section" data-i18n="about_us_link"></a></li>
+                <li><a href="#contact-us-section" data-i18n="contact_us_link"></a></li>
+                <li><a href="#privacy-policy-section" data-i18n="privacy_policy_link"></a></li>
+                <li><a href="#disclaimer-section" data-i18n="disclaimer_link"></a></li>
+            </ul>
+        </nav>
+        <p data-i18n="footer_copyright"></p>
+    </footer>
+
     <script src="translations.js"></script>
     <script src="main.js"></script>
 </body>

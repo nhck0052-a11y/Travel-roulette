@@ -203,11 +203,15 @@ const countries = [
 
 const drawButton = document.getElementById('draw-button');
 const resultDiv = document.getElementById('result');
+const resetButton = document.getElementById('reset-button'); // Get the new reset button
 
 drawButton.addEventListener('click', () => {
     resultDiv.textContent = translations[currentLang].drawing_text;
     // 이전에 생성된 폭죽 요소들을 제거
     document.querySelectorAll('.firework').forEach(f => f.remove());
+
+    drawButton.style.display = 'none'; // Hide the draw button
+    resetButton.style.display = 'none'; // Ensure reset button is hidden during drawing
 
     setTimeout(() => {
         const selectedCountry = getRandomCountry();
@@ -220,7 +224,29 @@ drawButton.addEventListener('click', () => {
         `;
         applyCountryStyles(selectedCountry.colorPalette); // Apply dynamic styles
         createFireworks(); // 폭죽 효과 트리거
+
+        resetButton.textContent = translations[currentLang].reset_button; // Set button text from translation
+        resetButton.style.display = 'block'; // Show the reset button
     }, 2000);
+});
+
+// Event listener for the new reset button
+resetButton.addEventListener('click', () => {
+    resultDiv.innerHTML = ''; // Clear the result display
+    document.querySelectorAll('.firework').forEach(f => f.remove()); // Remove any lingering fireworks
+
+    // Reset styles to default
+    document.body.style.background = 'linear-gradient(to right, var(--primary-color), var(--secondary-color))';
+    document.documentElement.style.setProperty('--primary-color', '#ff7e5f'); // Default primary color
+    document.documentElement.style.setProperty('--secondary-color', '#feb47b'); // Default secondary color
+
+    // Show the draw button and hide the reset button
+    drawButton.style.display = 'block';
+    resetButton.style.display = 'none';
+
+    // Reset main heading and sub-heading text
+    document.querySelector('h1[data-i18n="main_heading"]').textContent = translations[currentLang].main_heading;
+    document.querySelector('p[data-i18n="sub_heading"]').textContent = translations[currentLang].sub_heading;
 });
 
 function getRandomCountry() {
@@ -259,15 +285,7 @@ function createFireworks() {
 }
 
 
-// 제휴 문의 폼 토글 기능
-const toggleInquiryButton = document.getElementById('toggle-inquiry-form');
-const inquiryFormContent = document.getElementById('inquiry-form-content');
 
-if (toggleInquiryButton && inquiryFormContent) {
-    toggleInquiryButton.addEventListener('click', () => {
-        inquiryFormContent.classList.toggle('hidden');
-    });
-}
 
 // Language switcher logic
 const languageSwitcher = document.getElementById('language-switcher');
